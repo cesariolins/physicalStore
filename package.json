@@ -1,0 +1,12 @@
+{
+  "name": "physicalstore",
+  "version": "1.0.0",
+  "description": "API que mostra a distância entre a loja física ao cep informado pelo usuário.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
