@@ -15,7 +15,7 @@ const insertData = async () => {
             if (row.count === 0) {
                 const stmt = db_1.db.prepare('INSERT INTO lojas (nome, rua, numero, bairro, cidade, cep, telefone, latitude, longitude) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
                 lojas.forEach((loja) => {
-                    stmt.run(loja.nome, loja.cep, loja.latitude, loja.longitude);
+                    stmt.run(loja.nome, loja.rua, loja.numero, loja.bairro, loja.cidade, loja.cep, loja.telefone, loja.latitude, loja.longitude);
                 });
                 stmt.finalize((err) => {
                     if (err)

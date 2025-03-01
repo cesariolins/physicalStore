@@ -6,12 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const express_1 = __importDefault(require("express"));
-const routes_1 = __importDefault(require("./routes/routes"));
+const buscarLojas_1 = __importDefault(require("./routes/buscarLojas"));
 const startDB_1 = require("./models/startDB");
 const insertData_1 = require("./models/insertData");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use("/busca", routes_1.default);
+app.use("/busca", buscarLojas_1.default);
 const PORT = process.env.PORT || 3000;
 const startApp = async () => {
     try {
