@@ -4,7 +4,7 @@
   "description": "API que mostra a distância entre a loja física ao cep informado pelo usuário.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/app.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/dotenv": "^8.2.3",
     "@types/sqlite3": "^5.1.0",
+    "axios": "^1.8.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "sqlite3": "^5.1.7",
