@@ -2,7 +2,12 @@ import { db } from "../services/db"
 
 interface Loja {
     nome: string;
+    rua: string;
+    numero: number;
+    bairro: string;
+    cidade: string;
     cep: string;
+    telefone: number;
     latitude: number;
     longitude: number;
   }
@@ -29,7 +34,7 @@ interface Loja {
             )
   
             lojas.forEach((loja) => {
-              stmt.run(loja.nome, loja.cep, loja.latitude, loja.longitude)
+              stmt.run(loja.nome, loja.rua, loja.numero, loja.bairro, loja.cidade, loja.cep, loja.telefone, loja.latitude, loja.longitude)
             })
   
             stmt.finalize((err) => {
