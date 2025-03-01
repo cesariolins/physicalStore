@@ -14,4 +14,5 @@ export const db = new sqlite3.Database(DATABASE_FILE, (err) => {
         console.log("Conectado com o banco de dados")
     }
 });
+
     
