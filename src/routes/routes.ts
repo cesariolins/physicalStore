@@ -1,10 +1,10 @@
-import { Router, Request, Response } from 'express'
-import axios from 'axios'
-import { db } from '../services/db'
-import { getCoordinates } from '../models/getCoordinates'
+import express from 'express'
 import { cepValidation } from '../models/cepValidation'
+// import axios from 'axios'
+// import { db } from '../services/db'
+// import { getCoordinates } from '../models/getCoordinates'
 
-const router = Router()
+const router = express.Router()
 
 router.get('/lojas', cepValidation)
 
