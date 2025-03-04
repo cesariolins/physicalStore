@@ -19,18 +19,17 @@ export const searchShops = async (cep: string) => {
 
       for (const row of rows) {
         const shopDistance = await getDistance(cep, row.cep);
-        const distanceInKm = parseFloat(shopDistance?.replace(' km', '') || '0');
+        const distanceInKm = shopDistance / 1000
         if (distanceInKm <= 100) {
-          const { latitude, longitude, ...showShops } = row;
-          nearbyShops.push({ ...showShops, distance: distanceInKm });
+          nearbyShops.push({ ...row, distance: distanceInKm })
         }
       }
 
       if (nearbyShops.length === 0) {
-        return reject({ status: 404, message: 'Nenhuma loja encontrada no raio de 100 km' });
+        return reject({ status: 404, message: 'Nenhuma loja encontrada no raio de 100 km' })
       }
 
-      nearbyShops.sort((a, b) => a.distance - b.distance);
+      nearbyShops.sort((a, b) => a.distance - b.distance)
 
       resolve(nearbyShops);
     });

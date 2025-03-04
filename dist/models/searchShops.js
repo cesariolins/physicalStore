@@ -17,10 +17,9 @@ const searchShops = async (cep) => {
             const nearbyShops = [];
             for (const row of rows) {
                 const shopDistance = await (0, getDistance_1.getDistance)(cep, row.cep);
-                const distanceInKm = parseFloat(shopDistance?.replace(' km', '') || '0');
+                const distanceInKm = shopDistance / 1000;
                 if (distanceInKm <= 100) {
-                    const { latitude, longitude, ...showShops } = row;
-                    nearbyShops.push({ ...showShops, distance: distanceInKm });
+                    nearbyShops.push({ ...row, distance: distanceInKm });
                 }
             }
             if (nearbyShops.length === 0) {

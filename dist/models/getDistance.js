@@ -17,7 +17,7 @@ const getDistance = async (originCep, destinationCep) => {
         const data = response.data;
         if (data.routes.length > 0) {
             const route = data.routes[0];
-            const distance = route.legs[0].distance.text;
+            const distance = route.legs[0].distance.value;
             return distance;
         }
         else {
