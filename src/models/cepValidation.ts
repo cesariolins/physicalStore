@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
 import axios from "axios"
+import { Request, Response } from "express";
 import { getCoordinates } from "./getCoordinates"
 
 export const cepValidation = async (req: Request, res: Response) => {
