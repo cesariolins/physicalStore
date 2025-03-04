@@ -1,13 +1,7 @@
 import axios from "axios"
-import { Request, Response } from "express";
 import { getCoordinates } from "./getCoordinates"
 
-export const cepValidation = async (req: Request, res: Response) => {
-    const cep = req.query.cep as string
-    
-    if (!cep) {
-        return res.status(400).json({ message: 'CEP é obrigatório' })
-      }
+export const cepValidation = async (cep:string) => {
 
       try {
         
@@ -15,7 +9,7 @@ export const cepValidation = async (req: Request, res: Response) => {
         const data = response.data
     
         if (data.erro) {
-          return res.status(404).json({ message: 'CEP não encontrado' })
+          throw new Error('CEP não encontrado')
         }
     
         const address = `${data.logradouro}, ${data.localidade}, ${data.uf}`
