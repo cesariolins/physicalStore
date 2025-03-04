@@ -30,8 +30,12 @@ export const searchShops = async (cep: string) => {
       }
 
       nearbyShops.sort((a, b) => a.distance - b.distance)
+      const updatedShops = nearbyShops.map(shop => ({
+        ...shop,
+        distance: `${shop.distance.toFixed(2)} km`
+      }))
 
-      resolve(nearbyShops);
+      resolve(updatedShops);
     });
   });
 };

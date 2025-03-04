@@ -26,7 +26,11 @@ const searchShops = async (cep) => {
                 return reject({ status: 404, message: 'Nenhuma loja encontrada no raio de 100 km' });
             }
             nearbyShops.sort((a, b) => a.distance - b.distance);
-            resolve(nearbyShops);
+            const updatedShops = nearbyShops.map(shop => ({
+                ...shop,
+                distance: `${shop.distance.toFixed(2)} km`
+            }));
+            resolve(updatedShops);
         });
     });
 };
