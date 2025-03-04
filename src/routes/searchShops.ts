@@ -22,6 +22,8 @@ router.get('/lojas', async (req, res, next) => {
 
   } catch (error: any) {
     next(error)
+    res.status(404).json({ message: error.message })
+    return
   }
 })
 

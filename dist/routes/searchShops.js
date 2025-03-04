@@ -21,6 +21,8 @@ router.get('/lojas', async (req, res, next) => {
     }
     catch (error) {
         next(error);
+        res.status(404).json({ message: error.message });
+        return;
     }
 });
 exports.default = router;
