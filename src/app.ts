@@ -2,7 +2,7 @@ import dotenv from "dotenv"
 dotenv.config()
 
 import express from "express"
-import router from "./routes/searchShops"
+import router from "./routes/routerShops"
 import { startDB } from "./models/startDB"
 import { insertData } from "./models/insertData"
 
