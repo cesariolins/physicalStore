@@ -75,3 +75,7 @@
 2025-03-07 16:29:44 [31merror[39m: Erro ao obter direções.
 2025-03-07 16:31:27 [31merror[39m: Erro ao processar geocodificação do endereço.
 2025-03-07 16:35:37 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 21:23:14 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 21:24:19 [31merror[39m: CEP não encontrado.
+2025-03-07 21:28:13 [31merror[39m: não foi possível validar CEP.
+2025-03-07 21:37:34 [31merror[39m: Não foi possível obter as coordenadas do endereço.

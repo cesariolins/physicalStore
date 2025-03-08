@@ -12,7 +12,7 @@ const cepValidation = async (cep) => {
         const response = await axios_1.default.get(`https://viacep.com.br/ws/${cep}/json/`);
         const data = response.data;
         if (data.erro) {
-            logger_1.default.error(`CEP não encontrado.`);
+            logger_1.default.error(`não foi possível validar CEP.`);
         }
         const address = `${data.cep}`;
         const { latitude, longitude } = await (0, getCoordinates_1.getCoordinates)(address);

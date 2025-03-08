@@ -187,3 +187,238 @@
 ]
 2025-03-07 21:18:01 [32minfo[39m: Conectado ao banco de dados.
 2025-03-07 21:18:01 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 21:19:55 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 21:19:55 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 21:19:59 [32minfo[39m: Validando CEP: 30180070
+2025-03-07 21:20:01 [32minfo[39m: Buscando lojas próximas ao CEP: 30180070
+2025-03-07 21:20:26 [32minfo[39m: [
+  {
+    "nome": "Shopcez 6",
+    "rua": "Avenida do Contorno",
+    "numero": 8902,
+    "bairro": "Santo Agostinho",
+    "cidade": "Belo Horizonte",
+    "cep": "30110062",
+    "UF": "MG",
+    "telefone": "813322-1122",
+    "distance": "0.57 km"
+  },
+  {
+    "nome": "Shopcez 7",
+    "rua": "Dr Júlio Otaviano Ferreira",
+    "numero": 772,
+    "bairro": "Cidade Nova",
+    "cidade": "Belo Horizonte",
+    "cep": "31170200",
+    "UF": "MG",
+    "telefone": "813861-4455",
+    "distance": "6.87 km"
+  }
+]
+2025-03-07 21:20:58 [32minfo[39m: Validando CEP: 52050005
+2025-03-07 21:20:59 [32minfo[39m: Buscando lojas próximas ao CEP: 52050005
+2025-03-07 21:21:24 [32minfo[39m: [
+  {
+    "nome": "Shopcez 8",
+    "rua": "Cel. Alfredo Duarte",
+    "numero": 37,
+    "bairro": "Afogados",
+    "cidade": "Recife",
+    "cep": "50830380",
+    "UF": "PE",
+    "telefone": "813222-9988",
+    "distance": "5.45 km"
+  },
+  {
+    "nome": "Shopcez 2",
+    "rua": "Rua do Imperador",
+    "numero": 478,
+    "bairro": "Santo Amaro",
+    "cidade": "Recife",
+    "cep": "50010240",
+    "UF": "PE",
+    "telefone": "813234-5678",
+    "distance": "5.67 km"
+  },
+  {
+    "nome": "Shopcez 1",
+    "rua": "Professor Marculino Botelho",
+    "numero": 715,
+    "bairro": "Bairro Novo",
+    "cidade": "Olinda",
+    "cep": "53130150",
+    "UF": "PE",
+    "telefone": "813234-5678",
+    "distance": "11.55 km"
+  },
+  {
+    "nome": "Shopcez 9",
+    "rua": "Avenida Boa Viagem",
+    "numero": 5426,
+    "bairro": "Boa viagem",
+    "cidade": "Recife",
+    "cep": "51030000",
+    "UF": "PE",
+    "telefone": "813761-7788",
+    "distance": "13.37 km"
+  },
+  {
+    "nome": "Shopcez 3",
+    "rua": "Avenida Bernardo Vieira de Melo",
+    "numero": 890,
+    "bairro": "Piedade",
+    "cidade": "Jaboatão dos Guararapes",
+    "cep": "54400000",
+    "UF": "PE",
+    "telefone": "813487-2233",
+    "distance": "18.66 km"
+  }
+]
+2025-03-07 21:23:11 [32minfo[39m: Validando CEP: 80250030
+2025-03-07 21:23:13 [32minfo[39m: Buscando lojas próximas ao CEP: 80250030
+2025-03-07 21:23:14 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 21:23:29 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 21:23:29 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 21:24:18 [32minfo[39m: Validando CEP: 55290000
+2025-03-07 21:24:19 [31merror[39m: CEP não encontrado.
+2025-03-07 21:24:20 [32minfo[39m: Buscando lojas próximas ao CEP: 55290000
+2025-03-07 21:24:45 [32minfo[39m: {
+  "status": 200,
+  "message": "Nenhuma loja encontrada no raio de 100 km."
+}
+2025-03-07 21:28:06 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 21:28:06 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 21:28:11 [32minfo[39m: Validando CEP: 55290000
+2025-03-07 21:28:13 [31merror[39m: não foi possível validar CEP.
+2025-03-07 21:28:16 [32minfo[39m: Buscando lojas próximas ao CEP: 55290000
+2025-03-07 21:28:41 [32minfo[39m: {
+  "status": 200,
+  "message": "Nenhuma loja encontrada no raio de 100 km."
+}
+2025-03-07 21:31:24 [32minfo[39m: Validando CEP: 22420004
+2025-03-07 21:31:25 [32minfo[39m: Buscando lojas próximas ao CEP: 22420004
+2025-03-07 21:31:50 [32minfo[39m: {
+  "status": 200,
+  "message": "Nenhuma loja encontrada no raio de 100 km."
+}
+2025-03-07 21:35:12 [32minfo[39m: Validando CEP: 52060485
+2025-03-07 21:35:14 [32minfo[39m: Buscando lojas próximas ao CEP: 52060485
+2025-03-07 21:35:39 [32minfo[39m: [
+  {
+    "nome": "Shopcez 8",
+    "rua": "Cel. Alfredo Duarte",
+    "numero": 37,
+    "bairro": "Afogados",
+    "cidade": "Recife",
+    "cep": "50830380",
+    "UF": "PE",
+    "telefone": "813222-9988",
+    "distance": "4.87 km"
+  },
+  {
+    "nome": "Shopcez 2",
+    "rua": "Rua do Imperador",
+    "numero": 478,
+    "bairro": "Santo Amaro",
+    "cidade": "Recife",
+    "cep": "50010240",
+    "UF": "PE",
+    "telefone": "813234-5678",
+    "distance": "7.87 km"
+  },
+  {
+    "nome": "Shopcez 1",
+    "rua": "Professor Marculino Botelho",
+    "numero": 715,
+    "bairro": "Bairro Novo",
+    "cidade": "Olinda",
+    "cep": "53130150",
+    "UF": "PE",
+    "telefone": "813234-5678",
+    "distance": "13.13 km"
+  },
+  {
+    "nome": "Shopcez 9",
+    "rua": "Avenida Boa Viagem",
+    "numero": 5426,
+    "bairro": "Boa viagem",
+    "cidade": "Recife",
+    "cep": "51030000",
+    "UF": "PE",
+    "telefone": "813761-7788",
+    "distance": "13.89 km"
+  },
+  {
+    "nome": "Shopcez 3",
+    "rua": "Avenida Bernardo Vieira de Melo",
+    "numero": 890,
+    "bairro": "Piedade",
+    "cidade": "Jaboatão dos Guararapes",
+    "cep": "54400000",
+    "UF": "PE",
+    "telefone": "813487-2233",
+    "distance": "19.18 km"
+  }
+]
+2025-03-07 21:35:58 [32minfo[39m: Validando CEP: 52060-485
+2025-03-07 21:36:00 [32minfo[39m: Buscando lojas próximas ao CEP: 52060-485
+2025-03-07 21:36:25 [32minfo[39m: [
+  {
+    "nome": "Shopcez 8",
+    "rua": "Cel. Alfredo Duarte",
+    "numero": 37,
+    "bairro": "Afogados",
+    "cidade": "Recife",
+    "cep": "50830380",
+    "UF": "PE",
+    "telefone": "813222-9988",
+    "distance": "4.87 km"
+  },
+  {
+    "nome": "Shopcez 2",
+    "rua": "Rua do Imperador",
+    "numero": 478,
+    "bairro": "Santo Amaro",
+    "cidade": "Recife",
+    "cep": "50010240",
+    "UF": "PE",
+    "telefone": "813234-5678",
+    "distance": "7.87 km"
+  },
+  {
+    "nome": "Shopcez 1",
+    "rua": "Professor Marculino Botelho",
+    "numero": 715,
+    "bairro": "Bairro Novo",
+    "cidade": "Olinda",
+    "cep": "53130150",
+    "UF": "PE",
+    "telefone": "813234-5678",
+    "distance": "13.13 km"
+  },
+  {
+    "nome": "Shopcez 9",
+    "rua": "Avenida Boa Viagem",
+    "numero": 5426,
+    "bairro": "Boa viagem",
+    "cidade": "Recife",
+    "cep": "51030000",
+    "UF": "PE",
+    "telefone": "813761-7788",
+    "distance": "13.89 km"
+  },
+  {
+    "nome": "Shopcez 3",
+    "rua": "Avenida Bernardo Vieira de Melo",
+    "numero": 890,
+    "bairro": "Piedade",
+    "cidade": "Jaboatão dos Guararapes",
+    "cep": "54400000",
+    "UF": "PE",
+    "telefone": "813487-2233",
+    "distance": "19.18 km"
+  }
+]
+2025-03-07 21:37:31 [32minfo[39m: Validando CEP: 51020021
+2025-03-07 21:37:33 [32minfo[39m: Buscando lojas próximas ao CEP: 51020021
+2025-03-07 21:37:34 [31merror[39m: Não foi possível obter as coordenadas do endereço.

@@ -10,7 +10,7 @@ export const cepValidation = async (cep:string) => {
         const data = response.data
     
         if (data.erro) {
-          logger.error(`CEP não encontrado.`)
+          logger.error(`não foi possível validar CEP.`)
         }
        
         const address = `${data.cep}`

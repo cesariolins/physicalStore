@@ -24,7 +24,7 @@ const getCoordinates = async (address) => {
         };
     }
     catch (error) {
-        logger_1.default.error(`Erro ao processar CEP do endereço, Encerrando aplicação.`);
+        logger_1.default.error(`Erro ao tentar obter coordenadas do CEP, Encerrando aplicação.`);
         process.exit(1);
     }
 };

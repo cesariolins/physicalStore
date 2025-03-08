@@ -19,7 +19,7 @@ export const getCoordinates = async (address: string): Promise<{ latitude: numbe
         longitude: Number(response.data[0].lon),
       }
     } catch (error) {
-      logger.error(`Erro ao processar CEP do endereço, Encerrando aplicação.`)
+      logger.error(`Erro ao tentar obter coordenadas do CEP, Encerrando aplicação.`)
       process.exit(1)
     }
   }
