@@ -1,5 +1,6 @@
 import axios from "axios"
 import { getCoordinates } from "./getCoordinates"
+import logger from "../logger"
 
 export const cepValidation = async (cep:string) => {
 
@@ -9,13 +10,14 @@ export const cepValidation = async (cep:string) => {
         const data = response.data
     
         if (data.erro) {
-          throw new Error('CEP não encontrado')
+          logger.error(`CEP não encontrado.`)
         }
-    
-        const address = `${data.logradouro}, ${data.localidade}, ${data.uf}`
+       
+        const address = `${data.cep}`
+
         
         const { latitude, longitude } = await getCoordinates(address)
     } catch (error) {
-        throw new Error('Erro ao captar latitude e longitude.')
+      logger.error(`Erro ao capturar latitude e longitude: ${error}`)
     }
 }

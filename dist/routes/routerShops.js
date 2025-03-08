@@ -13,21 +13,19 @@ router.get('/lojas', async (req, res, next) => {
     if (!cep) {
         logger_1.default.warn('CEP não fornecido na solicitação');
         res.status(400).json({ message: 'CEP é obrigatório' });
-        return;
     }
     try {
         logger_1.default.info(`Validando CEP: ${cep}`);
         await (0, cepValidation_1.cepValidation)(cep);
         logger_1.default.info(`Buscando lojas próximas ao CEP: ${cep}`);
         const shops = await (0, searchShops_1.searchShops)(cep);
+        logger_1.default.info(JSON.stringify(shops, null, 2));
         res.status(200).json(shops);
-        return;
     }
     catch (error) {
         logger_1.default.error(`Erro ao processar a solicitação: ${error.message}`);
         next(error);
         res.status(404).json({ message: error.message });
-        return;
     }
 });
 exports.default = router;

@@ -1,5 +1,6 @@
 import axios from "axios"
 import { getCoordinates } from "./getCoordinates"
+import logger from "../logger"
 
 export const getDistance = async (originCep: string, destinationCep: string) => {
 
@@ -20,10 +21,10 @@ export const getDistance = async (originCep: string, destinationCep: string) => 
         const distance = route.legs[0].distance.value
         return distance
       } else {
-        console.log('Nenhuma rota encontrada.')
+        logger.info("Nenhuma rota encontrada.")
       }
     } catch (error) {
-        console.error('Erro ao obter direções:', error)
+      logger.error(`Erro ao obter direções.`)
       }
     }
     

@@ -11,7 +11,6 @@ router.get('/lojas', async (req, res, next) => {
   if (!cep) {
     logger.warn('CEP não fornecido na solicitação')
     res.status(400).json({ message: 'CEP é obrigatório' })
-    return
   }
 
   try {
@@ -21,14 +20,13 @@ router.get('/lojas', async (req, res, next) => {
     logger.info(`Buscando lojas próximas ao CEP: ${cep}`)
     const shops = await searchShops(cep)
 
+    logger.info(JSON.stringify(shops, null, 2))
     res.status(200).json(shops)
-    return
 
   } catch (error: any) {
     logger.error(`Erro ao processar a solicitação: ${error.message}`)
     next(error)
     res.status(404).json({ message: error.message })
-    return
   }
 })
 

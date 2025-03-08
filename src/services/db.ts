@@ -1,3 +1,4 @@
+import logger from "../logger";
 import sqlite3 from "sqlite3"
 require("dotenv").config()
 
@@ -9,9 +10,9 @@ if (!DATABASE_FILE) {
     
 export const db = new sqlite3.Database(DATABASE_FILE, (err) => {
     if (err) {
-        console.error("Erro ao conectar ao banco de dados:", err.message)
+        logger.error(`Erro ao conectar banco de dados: ${err.message}`)
     } else {
-        console.log("Conectado com o banco de dados")
+        logger.info(`Conectado ao banco de dados.`)
     }
 });
 

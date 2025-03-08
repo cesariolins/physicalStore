@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDistance = void 0;
 const axios_1 = __importDefault(require("axios"));
 const getCoordinates_1 = require("./getCoordinates");
+const logger_1 = __importDefault(require("../logger"));
 const getDistance = async (originCep, destinationCep) => {
     try {
         const originCoordinates = await (0, getCoordinates_1.getCoordinates)(originCep);
@@ -21,11 +22,11 @@ const getDistance = async (originCep, destinationCep) => {
             return distance;
         }
         else {
-            console.log('Nenhuma rota encontrada.');
+            logger_1.default.info("Nenhuma rota encontrada.");
         }
     }
     catch (error) {
-        console.error('Erro ao obter direções:', error);
+        logger_1.default.error(`Erro ao obter direções.`);
     }
 };
 exports.getDistance = getDistance;

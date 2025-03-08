@@ -4,7 +4,7 @@ dotenv.config()
 import express from "express"
 import router from "./routes/routerShops"
 import { startDB } from "./models/startDB"
-import { insertData } from "./models/insertData"
+import logger from "./logger"
 
 const app = express()
 
@@ -17,12 +17,11 @@ const PORT = process.env.PORT || 3000
 const startApp = async () => {
     try {
       await startDB()
-      await insertData()
 
-      app.listen(PORT, ()=> console.log(`Servidor funcionando na porta ${PORT}`))
+      app.listen(PORT, ()=> logger.info(`Servidor rodando na porta ${PORT}`))
 
     } catch (error) {
-      console.error('Erro ao iniciar o servidor:', error)
+      logger.error(`Erro ao processar a solicitação: ${error}`)
     }
   }
   

@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getCoordinates = void 0;
 const axios_1 = __importDefault(require("axios"));
+const logger_1 = __importDefault(require("../logger"));
 const getCoordinates = async (address) => {
     try {
         const response = await axios_1.default.get('https://nominatim.openstreetmap.org/search', {
@@ -15,7 +16,7 @@ const getCoordinates = async (address) => {
             },
         });
         if (response.data.length === 0) {
-            throw new Error('Não foi possível obter as coordenadas do endereço.');
+            logger_1.default.error('Não foi possível obter as coordenadas do endereço.');
         }
         return {
             latitude: Number(response.data[0].lat),
@@ -23,7 +24,8 @@ const getCoordinates = async (address) => {
         };
     }
     catch (error) {
-        throw new Error('Erro na geocodificação do endereço.');
+        logger_1.default.error(`Erro ao processar CEP do endereço, Encerrando aplicação.`);
+        process.exit(1);
     }
 };
 exports.getCoordinates = getCoordinates;

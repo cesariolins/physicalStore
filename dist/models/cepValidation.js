@@ -6,18 +6,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.cepValidation = void 0;
 const axios_1 = __importDefault(require("axios"));
 const getCoordinates_1 = require("./getCoordinates");
+const logger_1 = __importDefault(require("../logger"));
 const cepValidation = async (cep) => {
     try {
         const response = await axios_1.default.get(`https://viacep.com.br/ws/${cep}/json/`);
         const data = response.data;
         if (data.erro) {
-            throw new Error('CEP não encontrado');
+            logger_1.default.error(`CEP não encontrado.`);
         }
-        const address = `${data.logradouro}, ${data.localidade}, ${data.uf}`;
+        const address = `${data.cep}`;
         const { latitude, longitude } = await (0, getCoordinates_1.getCoordinates)(address);
     }
     catch (error) {
-        throw new Error('Erro ao captar latitude e longitude.');
+        logger_1.default.error(`Erro ao capturar latitude e longitude: ${error}`);
     }
 };
 exports.cepValidation = cepValidation;

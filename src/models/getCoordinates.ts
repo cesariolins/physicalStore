@@ -1,4 +1,5 @@
 import axios from 'axios'
+import logger from '../logger';
 
 export const getCoordinates = async (address: string): Promise<{ latitude: number; longitude: number }> => {
     try {
@@ -10,14 +11,15 @@ export const getCoordinates = async (address: string): Promise<{ latitude: numbe
         },
       })
       if (response.data.length === 0) {
-        throw new Error('Não foi possível obter as coordenadas do endereço.');
-      }
+        logger.error('Não foi possível obter as coordenadas do endereço.')
+    }
   
       return {
         latitude: Number(response.data[0].lat),
         longitude: Number(response.data[0].lon),
       }
     } catch (error) {
-      throw new Error('Erro na geocodificação do endereço.')
+      logger.error(`Erro ao processar CEP do endereço, Encerrando aplicação.`)
+      process.exit(1)
     }
-  };
+  }

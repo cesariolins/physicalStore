@@ -1,0 +1,189 @@
+2025-03-07 14:30:23 [32minfo[39m: Validando CEP: 52050005
+2025-03-07 14:30:27 [32minfo[39m: Buscando lojas próximas ao CEP: 52050005
+2025-03-07 15:56:51 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 15:56:51 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 15:56:59 [32minfo[39m: Validando CEP: 52050005
+2025-03-07 15:57:01 [32minfo[39m: Buscando lojas próximas ao CEP: 52050005
+2025-03-07 15:57:44 [32minfo[39m: Validando CEP: 51020021
+2025-03-07 15:57:46 [32minfo[39m: Buscando lojas próximas ao CEP: 51020021
+2025-03-07 15:57:57 [31merror[39m: Erro ao processar a solicitação: Nenhuma loja encontrada no raio de 100 km
+2025-03-07 16:14:32 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 16:14:32 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 16:14:43 [32minfo[39m: Validando CEP: 50710210
+2025-03-07 16:14:44 [32minfo[39m: Buscando lojas próximas ao CEP: 50710210
+2025-03-07 16:15:26 [32minfo[39m: Validando CEP: 51020021
+2025-03-07 16:15:28 [32minfo[39m: Buscando lojas próximas ao CEP: 51020021
+2025-03-07 16:15:28 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:28 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:29 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:29 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:30 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:30 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:31 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:31 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:32 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:32 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:33 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:33 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:34 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:34 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:35 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:35 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:36 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:36 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:37 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:37 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:38 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:38 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:15:39 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:15:39 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:04 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 16:21:04 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 16:21:09 [32minfo[39m: Validando CEP: 51020021
+2025-03-07 16:21:10 [32minfo[39m: Buscando lojas próximas ao CEP: 51020021
+2025-03-07 16:21:11 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:11 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:12 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:12 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:13 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:13 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:14 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:14 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:15 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:15 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:16 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:16 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:17 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:17 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:18 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:18 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:19 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:19 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:20 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:20 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:21 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:21 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:21:22 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:21:22 [31merror[39m: Erro ao obter direções: Error: Erro ao processar geocodificação do endereço.
+2025-03-07 16:28:46 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 16:28:46 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 16:28:49 [32minfo[39m: Validando CEP: 51020021
+2025-03-07 16:28:51 [32minfo[39m: Buscando lojas próximas ao CEP: 51020021
+2025-03-07 16:28:51 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:28:52 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:28:53 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:28:54 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:28:55 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:28:56 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:28:57 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:28:58 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:28:59 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:00 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:32 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 16:29:32 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 16:29:35 [32minfo[39m: Validando CEP: 51020021
+2025-03-07 16:29:37 [32minfo[39m: Buscando lojas próximas ao CEP: 51020021
+2025-03-07 16:29:37 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:29:37 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:38 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:29:38 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:39 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:29:39 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:40 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:29:40 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:41 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:29:41 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:42 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:29:42 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:43 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:29:43 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:29:44 [31merror[39m: Erro ao processar geocodificação do endereço
+2025-03-07 16:29:44 [31merror[39m: Erro ao obter direções.
+2025-03-07 16:31:21 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 16:31:21 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 16:31:24 [32minfo[39m: Validando CEP: 51020021
+2025-03-07 16:31:26 [32minfo[39m: Buscando lojas próximas ao CEP: 51020021
+2025-03-07 16:31:27 [31merror[39m: Erro ao processar geocodificação do endereço.
+2025-03-07 16:35:30 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 16:35:30 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 16:35:34 [32minfo[39m: Validando CEP: 51020021
+2025-03-07 16:35:36 [32minfo[39m: Buscando lojas próximas ao CEP: 51020021
+2025-03-07 16:35:37 [31merror[39m: Não foi possível obter as coordenadas do endereço.
+2025-03-07 16:38:35 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 16:38:35 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 16:38:39 [32minfo[39m: Validando CEP: 52050005
+2025-03-07 16:38:40 [32minfo[39m: Buscando lojas próximas ao CEP: 52050005
+2025-03-07 21:04:22 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 21:04:22 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 21:04:46 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 21:04:46 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 21:04:56 [32minfo[39m: Validando CEP: 50710210
+2025-03-07 21:04:58 [32minfo[39m: Buscando lojas próximas ao CEP: 50710210
+2025-03-07 21:07:33 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 21:07:33 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 21:07:38 [32minfo[39m: Validando CEP: 50710210
+2025-03-07 21:07:39 [32minfo[39m: Buscando lojas próximas ao CEP: 50710210
+2025-03-07 21:08:04 [32minfo[39m: [object Object],[object Object],[object Object],[object Object],[object Object]
+2025-03-07 21:10:24 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 21:10:24 [32minfo[39m: Servidor rodando na porta 3000
+2025-03-07 21:10:29 [32minfo[39m: Validando CEP: 50710210
+2025-03-07 21:10:30 [32minfo[39m: Buscando lojas próximas ao CEP: 50710210
+2025-03-07 21:10:55 [32minfo[39m: [
+  {
+    "nome": "Shopcez 8",
+    "rua": "Cel. Alfredo Duarte",
+    "numero": 37,
+    "bairro": "Afogados",
+    "cidade": "Recife",
+    "cep": "50830380",
+    "UF": "PE",
+    "telefone": "813222-9988",
+    "distance": "3.32 km"
+  },
+  {
+    "nome": "Shopcez 2",
+    "rua": "Rua do Imperador",
+    "numero": 478,
+    "bairro": "Santo Amaro",
+    "cidade": "Recife",
+    "cep": "50010240",
+    "UF": "PE",
+    "telefone": "813234-5678",
+    "distance": "7.41 km"
+  },
+  {
+    "nome": "Shopcez 1",
+    "rua": "Professor Marculino Botelho",
+    "numero": 715,
+    "bairro": "Bairro Novo",
+    "cidade": "Olinda",
+    "cep": "53130150",
+    "UF": "PE",
+    "telefone": "813234-5678",
+    "distance": "12.32 km"
+  },
+  {
+    "nome": "Shopcez 9",
+    "rua": "Avenida Boa Viagem",
+    "numero": 5426,
+    "bairro": "Boa viagem",
+    "cidade": "Recife",
+    "cep": "51030000",
+    "UF": "PE",
+    "telefone": "813761-7788",
+    "distance": "12.91 km"
+  },
+  {
+    "nome": "Shopcez 3",
+    "rua": "Avenida Bernardo Vieira de Melo",
+    "numero": 890,
+    "bairro": "Piedade",
+    "cidade": "Jaboatão dos Guararapes",
+    "cep": "54400000",
+    "UF": "PE",
+    "telefone": "813487-2233",
+    "distance": "17.09 km"
+  }
+]
+2025-03-07 21:18:01 [32minfo[39m: Conectado ao banco de dados.
+2025-03-07 21:18:01 [32minfo[39m: Servidor rodando na porta 3000
