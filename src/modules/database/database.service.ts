@@ -45,3 +45,4 @@ export class DatabaseService implements OnModuleInit {
       });
     });
   }
+}
