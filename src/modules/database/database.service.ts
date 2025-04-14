@@ -6,7 +6,12 @@ export class DatabaseService implements OnModuleInit {
   private db: Database;
 
   onModuleInit() {
-    this.db = new Database(process.env.DATABASE_FILE, (err) => {
+    const databaseFile = process.env.DATABASE_FILE;
+    if (!databaseFile) {
+      throw new Error('DATABASE_FILE não está definido no arquivo .env');
+    }
+
+    this.db = new Database(databaseFile, (err: Error | null) => {
       if (err) {
         console.error(`Erro ao conectar banco de dados: ${err.message}`);
       } else {

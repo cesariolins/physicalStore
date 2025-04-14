@@ -1,13 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { ShopsModule } from './modules/shops/shops.module';
-import { DatabaseModule } from './modules/database/database.module';
+import { DatabaseService } from './database.service';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot(), // Habilita variáveis de ambiente
-    ShopsModule,
-    DatabaseModule,
-  ],
+  providers: [DatabaseService],
+  exports: [DatabaseService],
 })
-export class AppModule {}
+export class DatabaseModule {}
