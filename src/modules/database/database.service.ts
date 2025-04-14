@@ -34,12 +34,14 @@ export class DatabaseService implements OnModuleInit {
     `);
   }
 
-  executeQuery(query: string): Promise<any[]> {
+  executeQuery<T>(query: string): Promise<T[]> {
     return new Promise((resolve, reject) => {
-      this.db.all(query, (err, rows) => {
-        if (err) reject(err);
-        else resolve(rows);
+      this.db.all(query, (err, rows: T[]) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(rows);
+        }
       });
     });
   }
-}
