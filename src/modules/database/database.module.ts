@@ -4,6 +4,10 @@ import { ShopsModule } from './modules/shops/shops.module';
 import { DatabaseModule } from './modules/database/database.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), ShopsModule, DatabaseModule],
+  imports: [
+    ConfigModule.forRoot(), // Habilita variáveis de ambiente
+    ShopsModule,
+    DatabaseModule,
+  ],
 })
 export class AppModule {}
