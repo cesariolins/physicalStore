@@ -27,7 +27,7 @@ export class ShopsService {
     Array<Shop & { distance: string }> | { status: number; message: string }
   > {
     // Buscar todas as lojas no banco
-    const rows = await this.databaseService.executeQuery<Shop[]>(
+    const rows = await this.databaseService.executeQuery<Shop>(
       'SELECT * FROM lojas;',
     );
 
