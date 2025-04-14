@@ -22,7 +22,7 @@ export class CepValidationService {
         throw new HttpException('CEP inválido', HttpStatus.NOT_FOUND);
       }
       return response.data;
-    } catch (error) {
+    } catch {
       throw new HttpException(
         'Erro ao validar CEP',
         HttpStatus.INTERNAL_SERVER_ERROR,

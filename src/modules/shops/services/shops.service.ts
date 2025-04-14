@@ -1,40 +1,64 @@
-import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { DatabaseService } from '../../database/database.service';
 import { GetDistanceService } from './get-distance.service';
-import { CepValidationService } from './cep-validation.service';
+
+interface Shop {
+  nome: string;
+  rua: string;
+  numero: number;
+  bairro: string;
+  cidade: string;
+  cep: string;
+  telefone: number;
+  latitude: number;
+  longitude: number;
+}
 
 @Injectable()
 export class ShopsService {
   constructor(
     private readonly databaseService: DatabaseService,
     private readonly getDistanceService: GetDistanceService,
-    private readonly cepValidationService: CepValidationService,
   ) {}
 
-  async getShopsByCep(cep: string): Promise<any> {
-    // Valida o CEP antes de buscar lojas
-    const validCep = await this.cepValidationService.validateCep(cep);
-
-    const rows = await this.databaseService.executeQuery(
+  async getShopsByCep(
+    cep: string,
+  ): Promise<
+    Array<Shop & { distance: string }> | { status: number; message: string }
+  > {
+    const rows = await this.databaseService.executeQuery<Shop[]>(
       'SELECT * FROM lojas;',
     );
     if (!rows || rows.length === 0) {
-      throw new HttpException('Nenhuma loja encontrada.', HttpStatus.NOT_FOUND);
+      return {
+        status: 200,
+        message: 'Nenhuma loja encontrada no banco de dados.',
+      };
     }
 
-    const nearbyShops = [];
+    const nearbyShops: Array<Shop & { distance: number }> = [];
+
     for (const row of rows) {
       const shopDistance = await this.getDistanceService.calculateDistance(
-        validCep.cep,
+        cep,
         row.cep,
       );
       const distanceInKm = shopDistance / 1000;
+
       if (distanceInKm <= 100) {
         nearbyShops.push({ ...row, distance: distanceInKm });
       }
     }
 
+    if (nearbyShops.length === 0) {
+      return {
+        status: 200,
+        message: 'Nenhuma loja encontrada no raio de 100 km.',
+      };
+    }
+
     nearbyShops.sort((a, b) => a.distance - b.distance);
+
     return nearbyShops.map((shop) => ({
       ...shop,
       distance: `${shop.distance.toFixed(2)} km`,

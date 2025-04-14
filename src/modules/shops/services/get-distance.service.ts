@@ -2,6 +2,16 @@ import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { GetCoordinatesService } from './get-coordinates.service';
 import axios from 'axios';
 
+interface GoogleMapsResponse {
+  routes: Array<{
+    legs: Array<{
+      distance: {
+        value: number;
+      };
+    }>;
+  }>;
+}
+
 @Injectable()
 export class GetDistanceService {
   constructor(private readonly getCoordinatesService: GetCoordinatesService) {}
@@ -19,14 +29,14 @@ export class GetDistanceService {
       const origin = `${originCoordinates.latitude},${originCoordinates.longitude}`;
       const destination = `${destinationCoordinates.latitude},${destinationCoordinates.longitude}`;
 
-      const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&key=SEU_API_KEY_DO_GOOGLE`;
+      const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&key=${process.env.KEY_GOOGLE}`;
 
-      const response = await axios.get(url);
+      const response = await axios.get<GoogleMapsResponse>(url);
       const data = response.data;
 
       if (data.routes.length > 0) {
         const route = data.routes[0];
-        const distance = route.legs[0].distance.value; // Distância em metros
+        const distance = route.legs[0].distance.value;
         return distance;
       } else {
         throw new HttpException(
@@ -35,6 +45,7 @@ export class GetDistanceService {
         );
       }
     } catch (error) {
+      console.error(`Erro ao calcular a distância: ${error}`);
       throw new HttpException(
         'Erro ao calcular a distância.',
         HttpStatus.INTERNAL_SERVER_ERROR,
