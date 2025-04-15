@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from '../../database/database.service';
 import { GetDistanceService } from './get-distance.service';
+import { MelhorEnvioService } from './melhor-envio.service';
 
 interface Shop {
   nome: string;
@@ -19,6 +20,7 @@ export class ShopsService {
   constructor(
     private readonly databaseService: DatabaseService,
     private readonly getDistanceService: GetDistanceService,
+    private readonly melhorEnvioService: MelhorEnvioService,
   ) {}
 
   async getShopsByCep(
@@ -37,7 +39,7 @@ export class ShopsService {
       };
     }
 
-    const nearbyShops: Array<Shop & { distance: number }> = [];
+    const nearbyShops: Array<Shop & { distance: number; frete: string }> = [];
 
     for (const row of rows) {
       const shopDistance = await this.getDistanceService.calculateDistance(
@@ -47,7 +49,15 @@ export class ShopsService {
       const distanceInKm = shopDistance / 1000;
 
       if (distanceInKm <= 100) {
-        nearbyShops.push({ ...row, distance: distanceInKm });
+        let frete: string;
+
+        if (distanceInKm <= 50) {
+          frete = 'R$ 15,00 (frete do PDV)';
+        } else {
+          frete = await this.melhorEnvioService.calcularFrete(row.cep, cep);
+        }
+
+        nearbyShops.push({ ...row, distance: distanceInKm, frete });
       }
     }
 
@@ -63,6 +73,7 @@ export class ShopsService {
     return nearbyShops.map((shop) => ({
       ...shop,
       distance: `${shop.distance.toFixed(2)} km`,
+      frete: shop.frete,
     }));
   }
 }

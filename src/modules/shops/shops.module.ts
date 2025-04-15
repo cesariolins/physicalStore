@@ -5,6 +5,7 @@ import { GetDistanceService } from './services/get-distance.service';
 import { GetCoordinatesService } from './services/get-coordinates.service';
 import { CepValidationService } from './services/cep-validation.service';
 import { DatabaseService } from '../database/database.service';
+import { MelhorEnvioService } from './services/melhor-envio.service';
 
 @Module({
   controllers: [ShopsController],
@@ -14,6 +15,7 @@ import { DatabaseService } from '../database/database.service';
     GetCoordinatesService,
     CepValidationService,
     DatabaseService,
+    MelhorEnvioService,
   ],
 })
 export class ShopsModule {}
