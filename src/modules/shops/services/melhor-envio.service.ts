@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosResponse, AxiosError } from 'axios';
 
 interface MelhorEnvioFrete {
   name: string;
@@ -16,12 +16,14 @@ export class MelhorEnvioService {
           {
             from: { postal_code: cepOrigem },
             to: { postal_code: cepDestino },
-            package: {
+            products: {
+              id: '1',
               height: 20,
               width: 20,
               length: 20,
               weight: 1,
             },
+            services: ['1', '2'],
           },
         ],
         {
@@ -42,7 +44,12 @@ export class MelhorEnvioService {
       const frete = response.data[0];
       return `R$ ${Number(frete.price).toFixed(2)} (frete via ${frete.name})`;
     } catch (error) {
-      console.error('Erro ao calcular frete com Melhor Envio:', error);
+      const err = error as AxiosError;
+      console.error('Erro ao calcular frete com Melhor Envio:');
+      console.error('Status:', err.response?.status);
+      console.error('Data:', JSON.stringify(err.response?.data, null, 2));
+      console.error('Mensagem:', err.message);
+
       throw new HttpException(
         'Erro ao calcular frete com Melhor Envio.',
         HttpStatus.INTERNAL_SERVER_ERROR,

@@ -48,24 +48,20 @@ export class ShopsService {
       );
       const distanceInKm = shopDistance / 1000;
 
-      if (distanceInKm <= 100) {
-        let frete: string;
+      let frete: string;
 
-        if (distanceInKm <= 50) {
-          frete = 'R$ 15,00 (frete do PDV)';
-        } else {
+      if (distanceInKm <= 50) {
+        frete = 'R$ 15,00 (frete do próprio PDV)';
+      } else {
+        try {
           frete = await this.melhorEnvioService.calcularFrete(row.cep, cep);
+        } catch (error) {
+          console.error('Erro ao calcular frete via Melhor Envio:', error);
+          frete = 'Erro ao calcular frete via Melhor Envio';
         }
-
-        nearbyShops.push({ ...row, distance: distanceInKm, frete });
       }
-    }
 
-    if (nearbyShops.length === 0) {
-      return {
-        status: 200,
-        message: 'Nenhuma loja encontrada no raio de 100 km.',
-      };
+      nearbyShops.push({ ...row, distance: distanceInKm, frete });
     }
 
     nearbyShops.sort((a, b) => a.distance - b.distance);
