@@ -16,19 +16,23 @@ let MelhorEnvioService = class MelhorEnvioService {
                 {
                     from: { postal_code: cepOrigem },
                     to: { postal_code: cepDestino },
-                    products: {
-                        id: '1',
-                        height: 20,
-                        width: 20,
-                        length: 20,
-                        weight: 1,
-                    },
-                    services: ['1', '2'],
+                    products: [
+                        {
+                            id: '1',
+                            weight: 1,
+                            width: 20,
+                            height: 20,
+                            length: 20,
+                            quantity: 1,
+                        },
+                    ],
                 },
             ], {
                 headers: {
                     Authorization: `Bearer ${process.env.MELHOR_ENVIO_TOKEN}`,
+                    Accept: 'application/json',
                     'Content-Type': 'application/json',
+                    'User-Agent': 'physicalStore/1.0',
                 },
             });
             if (!response.data || response.data.length === 0) {
@@ -38,11 +42,7 @@ let MelhorEnvioService = class MelhorEnvioService {
             return `R$ ${Number(frete.price).toFixed(2)} (frete via ${frete.name})`;
         }
         catch (error) {
-            const err = error;
-            console.error('Erro ao calcular frete com Melhor Envio:');
-            console.error('Status:', err.response?.status);
-            console.error('Data:', JSON.stringify(err.response?.data, null, 2));
-            console.error('Mensagem:', err.message);
+            console.error('Erro ao calcular frete com Melhor Envio:', error);
             throw new common_1.HttpException('Erro ao calcular frete com Melhor Envio.', common_1.HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

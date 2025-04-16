@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import axios, { AxiosResponse, AxiosError } from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 interface MelhorEnvioFrete {
   name: string;
@@ -16,20 +16,24 @@ export class MelhorEnvioService {
           {
             from: { postal_code: cepOrigem },
             to: { postal_code: cepDestino },
-            products: {
-              id: '1',
-              height: 20,
-              width: 20,
-              length: 20,
-              weight: 1,
-            },
-            services: ['1', '2'],
+            products: [
+              {
+                id: '1',
+                weight: 1,
+                width: 20,
+                height: 20,
+                length: 20,
+                quantity: 1,
+              },
+            ],
           },
         ],
         {
           headers: {
             Authorization: `Bearer ${process.env.MELHOR_ENVIO_TOKEN}`,
+            Accept: 'application/json',
             'Content-Type': 'application/json',
+            'User-Agent': 'physicalStore/1.0',
           },
         },
       );
@@ -44,12 +48,7 @@ export class MelhorEnvioService {
       const frete = response.data[0];
       return `R$ ${Number(frete.price).toFixed(2)} (frete via ${frete.name})`;
     } catch (error) {
-      const err = error as AxiosError;
-      console.error('Erro ao calcular frete com Melhor Envio:');
-      console.error('Status:', err.response?.status);
-      console.error('Data:', JSON.stringify(err.response?.data, null, 2));
-      console.error('Mensagem:', err.message);
-
+      console.error('Erro ao calcular frete com Melhor Envio:', error);
       throw new HttpException(
         'Erro ao calcular frete com Melhor Envio.',
         HttpStatus.INTERNAL_SERVER_ERROR,
