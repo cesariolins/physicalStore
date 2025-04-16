@@ -3,7 +3,7 @@ import { DatabaseService } from '../../database/database.service';
 import { GetDistanceService } from './get-distance.service';
 import { MelhorEnvioService } from './melhor-envio.service';
 
-interface Shop {
+export interface Shop {
   nome: string;
   rua: string;
   numero: number;
@@ -22,6 +22,12 @@ export class ShopsService {
     private readonly getDistanceService: GetDistanceService,
     private readonly melhorEnvioService: MelhorEnvioService,
   ) {}
+
+  async listAllShops(): Promise<Shop[]> {
+    return await this.databaseService.executeQuery<Shop>(
+      'SELECT * FROM lojas;',
+    );
+  }
 
   async getShopsByCep(
     cep: string,

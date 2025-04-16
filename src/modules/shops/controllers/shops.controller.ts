@@ -6,6 +6,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { ShopsService } from '../services/shops.service';
+import { Shop } from '../services/shops.service';
 
 @Controller('shops')
 export class ShopsController {
@@ -17,5 +18,10 @@ export class ShopsController {
       throw new HttpException('CEP é obrigatório', HttpStatus.BAD_REQUEST);
     }
     return await this.shopsService.getShopsByCep(cep);
+  }
+
+  @Get('listAll')
+  async listAll(): Promise<Shop[]> {
+    return await this.shopsService.listAllShops();
   }
 }
